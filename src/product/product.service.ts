@@ -24,7 +24,8 @@ export class ProductService {
 
   async findById(id: number) {
     return this.productModel.findOne({
-      where: { id }
+      where: { id },
+      include: ['category']
     })
   }
 
